@@ -1,0 +1,31 @@
+- pipeline:
+    name: check
+    manager: independent
+    trigger:
+      github:
+        - event: pull_request
+        - event: pull_request_review
+        - event: push
+        - event: check_run
+    success:
+      github:
+        check: success
+    failure:
+      github:
+        check: failure
+
+- pipeline:
+    name: gate
+    manager: dependent
+    trigger:
+      github:
+        - event: pull_request
+        - event: pull_request_review
+        - event: push
+        - event: check_run
+    success:
+      github:
+        check: success
+    failure:
+      github:
+        check: failure
