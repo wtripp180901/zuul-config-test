@@ -16,7 +16,7 @@
     roles:
       - zuul: zuul/zuul-jobs
     timeout: 1800
-    nodeset:
-      nodes:
-        - name: job-ns
-          label: zuul-job-ns
+    # nodeset:
+    #   nodes:
+    #     - name: job-ns
+    #       label: zuul-job-ns
