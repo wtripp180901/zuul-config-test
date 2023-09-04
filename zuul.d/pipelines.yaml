@@ -6,7 +6,7 @@
         - event: pull_request
         - event: pull_request_review
         - event: push
-        - event: check_run
+        #- event: check_run
     success:
       github:
         check: success
@@ -22,7 +22,7 @@
         - event: pull_request
         - event: pull_request_review
         - event: push
-        - event: check_run
+        #- event: check_run
     success:
       github:
         check: success
